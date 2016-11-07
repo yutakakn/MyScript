@@ -30,7 +30,7 @@ function GetLineCountFile() {
     $file = Get-Content -Encoding $enc -Path $filename
 
     Write-Output "行数(空白行を除く)は下記のとおりです"
-     $file | Measure-Object -Line -Character -Word | Format-List Lines
+     $file | Measure-Object -Line -Character -Word | Format-List Lines | Out-String -Stream | ?{$_ -ne ""}
 }
 
 function GetCharacterCountFile() {
@@ -40,7 +40,7 @@ function GetCharacterCountFile() {
     $file = Get-Content -Encoding $enc -Path $filename
 
     Write-Output "文字数(改行を除く)は下記のとおりです"
-     $file | Measure-Object -Line -Character -Word | Format-List Characters
+     $file | Measure-Object -Line -Character -Word | Format-List Characters | Out-String -Stream | ?{$_ -ne ""}
 }
 
 function GetWordCountFile() {
@@ -50,7 +50,7 @@ function GetWordCountFile() {
     $file = Get-Content -Encoding $enc -Path $filename
 
     Write-Output "単語数は下記のとおりです"
-     $file | Measure-Object -Line -Character -Word | Format-List Words
+     $file | Measure-Object -Line -Character -Word | Format-List Words | Out-String -Stream | ?{$_ -ne ""}
 }
 
 # コマンドラインヘルプ
