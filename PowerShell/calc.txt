@@ -1,0 +1,22 @@
+
+■PowerShellを電卓として使う
+
+●四則演算
+PS C:\usr\GitHub\MyScript\PowerShell> (1+2*3)/5
+1.4
+
+
+●カンマ表記
+PS C:\usr\GitHub\MyScript\PowerShell> (1230000).ToString("#,0")
+1,230,000
+
+
+●進数変換
+PS C:\usr\GitHub\MyScript\PowerShell> 0xefff
+61439
+PS C:\usr\GitHub\MyScript\PowerShell> (61439).ToString("x")
+efff
+
+
+
+
