@@ -5,18 +5,47 @@
 PS C:\usr\GitHub\MyScript\PowerShell> (1+2*3)/5
 1.4
 
+PS C:\usr\GitHub\MyScript\PowerShell> 0x1000 + 0xeffff
+987135
+
+PS C:\usr\GitHub\MyScript\PowerShell> (0x1000 + 0xeffff).ToString("x")
+f0fff
+
 
 ●カンマ表記
 PS C:\usr\GitHub\MyScript\PowerShell> (1230000).ToString("#,0")
 1,230,000
 
 
-●進数変換
+●基数変換
+・10進と16進
 PS C:\usr\GitHub\MyScript\PowerShell> 0xefff
 61439
 PS C:\usr\GitHub\MyScript\PowerShell> (61439).ToString("x")
 efff
 
+・2進への変換
+PS C:\usr\GitHub\MyScript\PowerShell> [Convert]::ToString(13, 2)
+1101
+PS C:\usr\GitHub\MyScript\PowerShell> [Convert]::ToString(0x7EFF, 2)
+111111011111111
 
+・2進から10進への変換
+PS C:\usr\GitHub\MyScript\PowerShell> [Convert]::ToInt32("1101", 2)
+13
+
+
+●数学関数
+・累乗
+PS C:\usr\GitHub\MyScript\PowerShell> [Math]::Pow(2, 10)
+1024
+
+・平方根
+PS C:\usr\GitHub\MyScript\PowerShell> [Math]::Sqrt(2)
+1.4142135623731
+
+・円周率
+PS C:\usr\GitHub\MyScript\PowerShell> [Math]::PI
+3.14159265358979
 
 
