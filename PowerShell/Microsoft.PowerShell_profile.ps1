@@ -7,18 +7,21 @@ PS>notepad $profile
 https://github.com/yutakakn
 #>
 
+# プロンプト設定
+function prompt {
+	# タイトルバーにフルパスを含める
+	(Get-Host).UI.RawUI.WindowTitle = "Windows PowerShell " + $PWD
+	
+	# プロンプトはカレントディレクトリのみとする
+	$cur = Split-Path($PWD) -Leaf
+	"PS " + $cur + "> "
+}
+
 # コマンドラインの操作モードをEmacs系にする・ベル音を消す・ヒストリの重複をなくす
 Set-PSReadlineOption -EditMode Emacs -BellStyle None -HistoryNoDuplicates
 
 # カレントディレクトリの設定
 Set-Location C:\usr\GitHub\MyScript\PowerShell
-
-# タイトルを設定する
-$a = (Get-Host).UI.RawUI 
-$add_str = " - Yutaka Hirata"
-if (! $a.WindowTitle.Contains($add_str)) {
-   $a.WindowTitle += $add_str
-}
 
 # F2キーを押すと、行全体を選択状態にする。
 #Set-PSReadlineKeyHandler -Key F2 -Function SelectAll
