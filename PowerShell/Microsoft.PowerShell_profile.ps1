@@ -10,7 +10,7 @@ https://github.com/yutakakn
 # プロンプト設定
 function prompt {
 	# タイトルバーにフルパスを含める
-	(Get-Host).UI.RawUI.WindowTitle = "Windows PowerShell " + $PWD
+#	(Get-Host).UI.RawUI.WindowTitle = "Windows PowerShell " + $PWD
 	
 	# プロンプトはカレントディレクトリのみとする
 	$cur = Split-Path($PWD) -Leaf
@@ -26,6 +26,8 @@ Set-Location C:\usr\GitHub\MyScript\PowerShell
 # F2キーを押すと、行全体を選択状態にする。
 #Set-PSReadlineKeyHandler -Key F2 -Function SelectAll
 
+# タイトルバーに時刻を表示する
+C:\usr\GitHub\MyScript\PowerShell\show_timer_onbar.ps1 start > $null 2>&1
 
 #
 # F2キーを押すと、行全体を選択状態にして、クリップボードへコピーする。
