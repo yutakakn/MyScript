@@ -1,0 +1,1 @@
+class Quine{static void Main(){string s = "class Quine{0}static void Main(){0}string s = {1}{3}{1};System.Console.WriteLine(s, (char)123, (char)34, (char)125, s);{2}{2}";System.Console.WriteLine(s, (char)123, (char)34, (char)125, s);}}
