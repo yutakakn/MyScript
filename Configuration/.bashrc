@@ -1,6 +1,7 @@
 
 alias ls='ls -F'
 alias ll='ls -lF'
+alias rm='rm -I'
 
 alias crlf='perl -i -pe "s/\r\n/\n/" '
 
