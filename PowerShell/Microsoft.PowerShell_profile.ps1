@@ -1,6 +1,7 @@
 <#
 PowerShell用プロファイル設定 for Windows10(PowerShell 5.1)
 
+PS>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 PS>notepad $profile
 
 (C) 2016 Yutaka Hirata
