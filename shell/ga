@@ -1,0 +1,1 @@
+find . -name "*.*" -print -type f | xargs grep -n "$1" /dev/null | less
