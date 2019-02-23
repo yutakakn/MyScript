@@ -1,1 +1,1 @@
-find . -name "*.[ch]" -print -type f | xargs grep -n "$1" /dev/null | less
+find . \( -name "*.[ch]" -o -name "*.cpp" -o -name "*.cc" \) -print -type f | xargs grep -n "$1" -dskip /dev/null | more
