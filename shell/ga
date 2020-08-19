@@ -1,1 +1,1 @@
-find . -name "*.*" -print -type f | xargs grep -n -dskip "$1" /dev/null | more
+find . -name "*" -print -type f | xargs grep -n -dskip "$1" /dev/null | more
